@@ -1,0 +1,50 @@
+@import "../../../main.scss";
+.login_div {
+  display: flex;
+  flex-direction: column;
+  min-height: 45px;
+  margin: 4px 0;
+  width: 75%;
+  .login_label_div {
+    display: flex;
+    align-items: center;
+    .login_label {
+      font-size: 1rem;
+      color: $p_black;
+      margin: 4px 0;
+    }
+    .check {
+      padding-bottom: 2px;
+      margin-left: 80px;
+      height: 100%;
+    }
+    .fix {
+      margin-bottom: 5px;
+    }
+  }
+  .login_label {
+    font-size: 1.2rem;
+    color: $p_black;
+    margin: 4px 0;
+  }
+  .login_input {
+    height: 50px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid $me_blue;
+    background-color: white;
+    border-radius: 4px 4px 0 0;
+    padding-left: 5px;
+    transition: 0.2s ease-in-out;
+  }
+  .login_input:focus {
+    background-color: $me_blue;
+    color: $s_white;
+    transition: 0.2s ease-in-out;
+  }
+  .show_icon {
+    cursor: pointer;
+    margin-top: 4px;
+    font-size: 2rem;
+  }
+}

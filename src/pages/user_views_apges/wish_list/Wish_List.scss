@@ -1,0 +1,40 @@
+@import "../../../scss/variables.scss";
+
+.wish_box_center {
+  display: flex;
+  min-height: 75px;
+  margin: auto;
+  width: 80%;
+  margin-top: 10px;
+  .wish_side {
+    width: 30%;
+  }
+  .wish_box_down {
+    width: 70%;
+    min-height: 100px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: $s_shadow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .wish_header {
+      margin: 0;
+      margin-bottom: 2px;
+      width: 100%;
+      background-color: $l_blue;
+      background-color: brown;
+    }
+    .wish_box_text {
+      font-size: 0.7rem;
+      font-weight: 300;
+      .one {
+        cursor: pointer;
+        font-weight: 400;
+      }
+      .one:hover {
+        color: lighten($me_blue, 15%);
+      }
+    }
+  }
+}

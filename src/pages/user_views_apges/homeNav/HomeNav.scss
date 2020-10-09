@@ -1,0 +1,48 @@
+@import "../../../scss/variables.scss";
+.home_nav {
+  display: flex;
+  width: 100%;
+  height: 45px;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: white;
+  border-radius: 5px;
+  .home_item {
+    margin: 0 8px;
+    cursor: pointer;
+    color: $m_grey;
+    font-size: 1.3rem;
+    transition: $tran2;
+  }
+  .home_item:hover {
+    border-bottom: 1px solid $s_black;
+    color: $s_black;
+    transition: $tran2;
+  }
+  .select {
+    border-bottom: 1px solid royalblue;
+    color: royalblue;
+    transition: $tran2;
+  }
+  .select:hover {
+    border-bottom: 1px solid royalblue;
+    color: royalblue;
+    transition: $tran2;
+  }
+  .close_header {
+    height: 20px;
+  }
+}
+/*
+.home_nav_close {
+  height: 10px;
+  display: flex;
+  width: 100%;
+  margin: 10px 0;
+  align-items: center;
+  justify-content: space-evenly;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 5px;
+}*/

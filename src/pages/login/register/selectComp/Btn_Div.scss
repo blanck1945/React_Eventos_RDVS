@@ -1,0 +1,19 @@
+.select_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 13px 5px;
+  .fix {
+    width: 80%;
+    height: 45px;
+    font-size: 1.3rem;
+    padding: 4px 10px;
+  }
+  .select_p {
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}

@@ -1,0 +1,11 @@
+.crear_div {
+  display: flex;
+  flex-direction: column;
+  .crear_label {
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  .error_text {
+    color: brown;
+  }
+}

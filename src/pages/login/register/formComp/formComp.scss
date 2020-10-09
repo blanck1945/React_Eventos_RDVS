@@ -1,0 +1,28 @@
+//Congratz styles
+@import "../../../../scss/variables.scss";
+
+.comp_box {
+  width: 70%;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  margin: auto;
+  background-color: $succ;
+  .congratz_text {
+    color: $me_blue;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  .redirect_box {
+    width: 50%;
+    color: $me_blue;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    font-size: 0.7rem;
+  }
+}

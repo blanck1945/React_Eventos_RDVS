@@ -1,0 +1,161 @@
+@import "../../../../scss/variables.scss";
+.news_box {
+  width: 100%;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-items: space-evenly;
+  margin: auto;
+  margin-bottom: 20px;
+  .card_box {
+    display: flex;
+    width: 100%;
+    min-height: 180px;
+    padding: 4px 0;
+    .new_card {
+      width: 33%;
+      margin: 4px 8px;
+      box-shadow: $p_shadow;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      border-radius: 5px;
+      height: 250px;
+      align-items: center;
+      background-color: white;
+      .event_img {
+        height: 55%;
+        width: 100%;
+        border-bottom: 2px solid $me_blue;
+      }
+      .event_info_box {
+        .event_text {
+          font-size: 0.9rem;
+          margin-top: 3px;
+          text-align: center;
+          font-weight: 400;
+          color: $l_blue;
+        }
+      }
+      .event_title_text {
+        font-size: 1rem;
+        font-weight: 700;
+        color: $l_blue;
+        height: 55px;
+        padding: 0 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .social_box {
+        position: relative;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        .social_icon {
+          top: 13px;
+          background-color: white;
+          position: relative;
+          border: 1px solid $me_blue;
+          font-size: 1.8rem;
+          border-radius: 50%;
+          padding: 6px;
+        }
+        .social_icon:hover {
+          background-color: $l_blue;
+          color: white;
+          transition: $tran3;
+        }
+        .heart:hover {
+          color: rgb(255, 51, 51);
+        }
+        .share:hover {
+          color: rgb(42, 128, 42);
+        }
+      }
+      .white {
+        color: $s_white;
+      }
+      .select_dis {
+        border: none;
+        margin-top: 4px;
+        background-color: $me_blue;
+        color: $s_white;
+        border-radius: 5px 5px 0 0;
+      }
+    }
+    @media (min-width: 1100px) {
+      .new_card {
+        height: 400px;
+        width: 33%;
+        .event_img {
+          height: 60%;
+          width: 100%;
+        }
+        .event_info_box {
+          min-height: 35px;
+          .event_text {
+            font-size: 1.3rem;
+          }
+        }
+        .event_title_text {
+          font-size: 1.4rem;
+        }
+        .social_box {
+          position: relative;
+          width: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          .social_icon {
+            top: 30px;
+            background-color: white;
+            position: relative;
+            border: 1px solid $me_blue;
+            font-size: 2.2rem;
+            border-radius: 50%;
+            padding: 6px;
+          }
+          .social_icon:hover {
+            background-color: $l_blue;
+            color: white;
+            transition: $tran3;
+          }
+          .heart:hover {
+            color: rgb(255, 51, 51);
+          }
+          .share:hover {
+            color: rgb(42, 128, 42);
+          }
+        }
+      }
+    }
+  }
+  .overflow {
+    overflow: hidden;
+    height: 170px;
+    .fix_card {
+      min-width: 145px;
+      height: 160px;
+      margin: 0 4.1px;
+      .event_img {
+        height: 50%;
+        width: 70%;
+      }
+      .event_text {
+        font-size: 0.5rem;
+        margin: 3px 0;
+        color: $s_black;
+      }
+    }
+  }
+}
+
+/*
+ .social_box {
+            .social_icon {
+              font-size: 2.5rem;
+            }
+          }*/

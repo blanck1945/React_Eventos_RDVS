@@ -1,0 +1,28 @@
+@import "../../scss/variables.scss";
+.navbar {
+  width: 100%;
+  min-height: 85px;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+  box-shadow: s_shadow;
+  background-color: $me_blue;
+  .nav_link {
+    color: $s_white;
+    font-weight: 300;
+    font-size: 0.9rem;
+    padding: 6px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  .active_link {
+    background-color: $s_white;
+    padding: 6px;
+    color: $me_blue;
+    font-weight: 400;
+    font-size: 1.1rem;
+    transition: 0.3s ease-in-out;
+  }
+}

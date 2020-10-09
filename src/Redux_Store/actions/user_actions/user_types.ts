@@ -1,0 +1,6 @@
+export const LOGIN_USER = "LOGIN_USER";
+export const LOGOUT_USER = "LOGOUT_USER";
+export const TOOGLE_LOG_VALUE = "TOOGLE_LOG_VALUE";
+export const SET_LOGGIN_ERROR_MSG = "SET_LOGGING_ERROR_MSG";
+export const SET_USER_EMAIL = "SET_USER_EMAIL";
+export const SET_USER_WISH_LIST = "SET_USER_WISH_LIST";

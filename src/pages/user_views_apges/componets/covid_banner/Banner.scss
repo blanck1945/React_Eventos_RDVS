@@ -1,0 +1,32 @@
+@import "../../../../scss/variables.scss";
+.banner {
+  width: 55%;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  min-height: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 0.5px solid $me_blue;
+  justify-items: center;
+  position: fixed;
+  top: 125px;
+  padding-top: 2px;
+  border-radius: 0 0 5px 5px;
+  cursor: pointer;
+  padding-bottom: 3px;
+  transition: 0.3s ease-in-out;
+  .red_text {
+    font-size: 1.1rem;
+    color: brown;
+  }
+}
+.banner:hover {
+  background-color: brown;
+  transition: 0.3s ease-in-out;
+}
+.banner:hover > .red_text {
+  transition: 0.3s ease-in-out;
+  color: $s_white;
+}

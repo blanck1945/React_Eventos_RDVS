@@ -1,0 +1,21 @@
+@import "../../scss/variables.scss";
+.home_page {
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  .home_aside {
+    display: flex;
+    width: 20%;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.753);
+    .top_bor {
+      border-top: 1px solid $s_grey;
+    }
+  }
+  .home_center {
+    min-height: 100vh;
+    background-color: $s_white;
+  }
+}

@@ -1,0 +1,81 @@
+@import "../../../../../scss/variables.scss";
+.user_info_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 55px;
+  padding: 0 10px;
+  margin: 10px 0;
+  .active_btn {
+    height: 45px;
+    padding: 3px 0;
+    width: 75%;
+    padding: 0 4px;
+    margin: 8px 0;
+    font-size: 1.1rem;
+    background-color: $l_blue;
+    border: none;
+    color: white;
+    border-radius: 5px;
+  }
+  .change_btn {
+    height: 45px;
+    padding: 3px 0;
+    width: 75%;
+    padding: 0 4px;
+    margin: 8px 0;
+    font-size: 1.1rem;
+    background-color: #eee;
+    border: none;
+    color: $l_blue;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: $tran2;
+  }
+  .change_btn:hover {
+    background-color: $l_blue;
+    color: white;
+    transition: $tran2;
+  }
+  .user_info {
+    color: $l_blue;
+    font-size: 1.3rem;
+    margin-left: 12px;
+  }
+  .delete_btn {
+    font-size: 1.1rem;
+    height: 45px;
+    padding: 3px 0;
+    width: 75%;
+    margin: 8px 0;
+
+    color: $err;
+    border: 1px solid $err;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: $tran2;
+  }
+  .delete_btn:hover {
+    background-color: $err;
+    color: white;
+    transition: $tran2;
+  }
+}
+.fix {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  background-color: royalblue;
+  align-items: center;
+  width: 50%;
+  .user_info_div {
+    display: grid;
+    grid-template-columns: 50% 25%;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+
+    min-height: 55px;
+  }
+}

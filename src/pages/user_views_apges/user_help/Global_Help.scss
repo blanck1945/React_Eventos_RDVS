@@ -1,0 +1,80 @@
+@import "../../../scss/variables.scss";
+.help_home_dis {
+  margin: auto;
+  width: 80%;
+  min-height: 200px;
+  padding-bottom: 4px;
+  margin-top: 10px;
+  background-color: white;
+  .fix_header {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 5px;
+  }
+  .help_box {
+    background-color: $s_white;
+    width: 95%;
+    padding: 4px 4px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    min-height: 50px;
+    align-items: center;
+    font-size: 1.3rem;
+    color: $l_blue;
+    justify-content: space-between;
+    margin: 3px auto;
+    transition: 0.2s ease-in-out;
+    .help_item {
+      display: flex;
+      align-items: center;
+      width: 80%;
+      min-height: 35px;
+      text-align: center;
+      font-size: 1rem;
+      justify-content: center;
+      padding: 4px 4px;
+      margin: 4px 0;
+      color: $l_blue;
+      .help_text {
+        font-size: 0.6rem;
+      }
+    }
+    .help_item:hover {
+      background-color: $l_blue;
+      color: white;
+      transition: 0.2s ease-in-out;
+    }
+    .optionsMenu {
+      width: 100%;
+      padding: 4px 4px;
+      display: flex;
+      margin: 2px 0;
+      font-size: 0.6rem;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      transition: 0.2s ease-in-out;
+      .menuHeader {
+        padding: 4px 4px;
+      }
+      .borNone {
+        border-bottom: none;
+      }
+    }
+    .hidden {
+      display: none;
+      transition: 0.2s ease-in-out;
+    }
+  }
+}
+
+/*
+  .help_box:hover {
+    background-color: $me_blue;
+    color: $s_white;
+    transition: 0.2s ease-in-out;
+  }
+  .help_box:hover > .optionsMenu {
+    color: black;
+  }*/

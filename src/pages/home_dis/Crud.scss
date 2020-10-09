@@ -1,0 +1,21 @@
+.crud_btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  .general_btn {
+    width: 20%;
+    height: 30px;
+  }
+  .active {
+    width: 20%;
+    height: 30px;
+  }
+}
+.crud_dis {
+  width: 100%;
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}

@@ -1,0 +1,15 @@
+@import "../../../../scss/variables.scss";
+.user_fix {
+  width: 45%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: $s_shadow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn_2{
+    min-height: 50px;
+    min-width: 50%;
+}

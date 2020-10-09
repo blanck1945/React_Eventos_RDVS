@@ -1,0 +1,35 @@
+@import "../../../scss/variables.scss";
+.wish_item {
+  width: 95%;
+  min-height: 50px;
+  background-color: white;
+  color: $s_black;
+  box-shadow: $s_shadow;
+  margin-bottom: 4px;
+  .header_text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding-left: 8px;
+    padding-top: 8px;
+  }
+  .item_text {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 0 auto;
+    min-height: 45px;
+    cursor: pointer;
+    width: 95%;
+    padding-left: 2px;
+    padding-top: 3px;
+    transition: 0.2s ease-in-out;
+    border-bottom: 0.5px solid $s_grey;
+  }
+  .last {
+    border-bottom: none;
+  }
+  .item_text:hover {
+    background-color: $l_blue;
+    color:white;
+    transition: 0.2s ease-in-out;
+  }
+}

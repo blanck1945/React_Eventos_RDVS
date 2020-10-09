@@ -1,0 +1,78 @@
+@import "../../../scss/variables.scss";
+.center_nav {
+  width: 100%;
+  background-color: lighten($me_blue, 10%);
+  height: 55px;
+  display: flex;
+  align-items: center;
+  .center_frame {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .center_nav {
+      height: 40px;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      padding: 0 5px;
+      justify-content: space-between;
+      .center_text {
+        cursor: pointer;
+        color: $s_white;
+        font-size: 2rem;
+      }
+      .search_box_glass {
+        width: 50%;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        .glass {
+          height: 100%;
+          cursor: pointer;
+          border: none;
+          background-color: $me_blue;
+          color: white;
+          width: 6%;
+          padding: 5px;
+        }
+        .search_inp {
+          border: none;
+          height: 100%;
+          background-color: $s_white;
+          border-left: 0.5px solid $me_blue;
+          width: 94%;
+          padding-left: 4px;
+          font-size: 0.7rem;
+        }
+      }
+      .search_box {
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 24%;
+        .search_btn {
+          height: 30px;
+          border: none;
+          cursor: pointer;
+          width: 40%;
+          font-size: 0.9rem;
+          border-radius: 5px;
+        }
+        .advance_btn {
+          font-size: 0.9rem;
+          cursor: pointer;
+          border: none;
+          border-radius: 5px;
+          height: 30px;
+        }
+        .btn_se:hover {
+          background-color: $me_blue;
+          color: $s_white;
+          transition: 0.2s ease-in-out;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../../../scss/variables.scss";
+.aside_comp {
+  width: 100%;
+  min-height: 34px;
+  .aside_item {
+    height: 34px;
+    width: 100%;
+    font-size: 0.9rem;
+    padding-top: 8px;
+    padding-left: 5px;
+    color: $p_black;
+    cursor: pointer;
+  }
+  .metal {
+    background-color: $me_blue;
+    color: $s_white;
+  }
+  .metal:hover {
+    background-color: darken($me_blue, 8%);
+  }
+  .select {
+    background-color: $s_grey;
+    color: lighten($me_blue, 10%);
+    transition: 0.2s ease-in-out;
+  }
+}

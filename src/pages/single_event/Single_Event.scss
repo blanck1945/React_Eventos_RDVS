@@ -1,0 +1,120 @@
+@import "../../scss/variables.scss";
+.single_event_box {
+  width: 100%;
+  min-height: 70vh;
+  background-color: $s_white;
+  .event_div {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-content: center;
+    justify-items: center;
+    flex-direction: column;
+    .event_img {
+      margin: auto;
+      width: 50%;
+      height: 50%;
+    }
+  }
+  .general_btn {
+    width: 40%;
+    margin: 5px 30%;
+  }
+  .select_box {
+    width: 90%;
+    display: flex;
+    background-color: white;
+    min-height: 280px;
+    justify-content: space-evenly;
+    margin: 8px auto;
+    .select_div {
+      width: 50%;
+      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .tickets_div {
+        display: flex;
+        align-items: center;
+        width: 90%;
+        margin: 5px 0;
+        justify-content: space-evenly;
+        .total_tickets {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          padding: 2px 5px;
+          margin: 0 4px;
+          align-content: center;
+          justify-content: space-evenly;
+          .font_small {
+            font-size: 0.7rem;
+          }
+          .custom_class {
+            height: 15px;
+            padding: 0;
+          }
+          .ticket_data {
+            display: flex;
+            align-content: center;
+            justify-content: space-between;
+            border-bottom: 0.5px solid $s_black;
+            .event_text {
+              font-size: 0.8rem;
+              color: black;
+            }
+            .blueSell {
+              color: royalblue;
+            }
+            .redSell {
+              color: brown;
+            }
+            .greenSell {
+              color: greenyellow;
+            }
+          }
+        }
+      }
+      .event_data {
+        margin-top: 5px;
+        .date_div {
+          display: flex;
+          .event_text {
+            border-bottom: 0.5px solid $s_black;
+            font-size: 0.8rem;
+            color: black;
+          }
+        }
+      }
+      .form_select {
+        display: flex;
+        flex-direction: column;
+        min-height: 65px;
+        .filter_div {
+          min-height: 25px;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          .input_text {
+            font-size: 0.7rem;
+            color: $s_black;
+            width: 70%;
+          }
+          .marPad {
+            margin: 3px 0;
+            padding: 4px;
+            margin-left: 30px;
+            color: $s_white;
+          }
+        }
+        .flex {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+  .dis_text {
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+}

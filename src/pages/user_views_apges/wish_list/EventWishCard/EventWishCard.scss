@@ -1,0 +1,54 @@
+@import "../../../../scss/variables.scss";
+.event_wish_div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  .event_wish_card {
+    display: grid;
+    grid-template-columns: 25% 40% 30%;
+    align-items: center;
+    justify-content: space-between;
+    height: 160px;
+    border: 1px solid white;
+    background-color: $l_blue;
+    padding-right: 8px;
+    color: white;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    .event_img {
+      width: 100%;
+      height: 100%;
+    }
+    .center_card {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .center_sub_text {
+        font-size: 0.7rem;
+      }
+    }
+  }
+  .event_wish_card:hover {
+    background-color: white;
+    color: $l_blue;
+    border: 1px solid $me_blue;
+    transition: 0.2s ease-in-out;
+  }
+  .delete_bar {
+    width: 100%;
+    background-color: $me_blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    height: 35px;
+    transition: 0.2s ease-in-out;
+  }
+  .delete_bar:hover {
+    background-color: brown;
+    transition: 0.2s ease-in-out;
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../../scss/variables.scss";
+.event_stats {
+  background-color: white;
+  margin: 5px auto;
+  width: 90%;
+  min-height: 200px;
+  .filter_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .stats_div {
+    flex-direction: column;
+    display: flex;
+    .width_li {
+      margin: auto;
+      width: 90%;
+    }
+    .stats_center {
+      display: flex;
+      margin-top: 3px;
+      justify-content: space-evenly;
+      .stats_box > h3 {
+        border-bottom: 0.5px solid $s_black;
+        margin: 2px 0;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

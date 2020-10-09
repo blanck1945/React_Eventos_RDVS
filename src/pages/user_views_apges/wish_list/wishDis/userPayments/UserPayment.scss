@@ -1,0 +1,76 @@
+@import "../../../../../scss/variables.scss";
+
+.payment_div {
+  width: 70%;
+  min-height: 100px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: $s_shadow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .payment_table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100px;
+    .table_header {
+      height: 45px;
+      font-size: 1.1rem;
+      padding: 10px;
+      background-color: $l_blue;
+      color: white;
+      display: grid;
+      grid-template-columns: 8% 35% 25% 50%;
+      align-items: center;
+      width: 100%;
+    }
+
+    .none_text {
+      color: $l_blue;
+      font-size: 1.1rem;
+      width: 100%;
+      height: 30px;
+      margin: 10px auto;
+      text-align: center;
+    }
+    .table_row {
+      height: 40px;
+      font-size: 1.1rem;
+      padding: 10px;
+      background-color: white;
+      border-bottom: 1px solid $l_blue;
+      border-top: 1px solid $l_blue;
+      color: $l_blue;
+      display: grid;
+      grid-template-columns: 8% 35% 25% 50%;
+      align-items: center;
+      width: 100%;
+    }
+    .btn_div {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+    }
+    .fix_rox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: $tran2;
+      background-color: #eee;
+      cursor: pointer;
+      font-size: 1.4rem;
+    }
+    .fix_rox:hover {
+      transition: $tran2;
+      background-color: $l_blue;
+      color: white;
+    }
+    .active {
+      background-color: $l_blue;
+      color: white;
+    }
+  }
+}

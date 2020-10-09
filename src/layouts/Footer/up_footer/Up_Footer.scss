@@ -1,0 +1,62 @@
+@import "../../../scss/variables.scss";
+.up_footer {
+  width: 100%;
+  margin: auto;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .up_div {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    .up_text {
+      font-size: 0.7rem;
+      margin: 2px 0;
+    }
+    .social_div {
+      height: 30px;
+      width: 30%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-bottom: 2px;
+      .social_icon {
+        background-color: $s_white;
+        border: 0.5px solid $me_blue;
+        border-radius: 50%;
+        padding: 5px;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+      }
+      .face:hover {
+        background-color: $face;
+        color: $s_white;
+        border: 0.5px solid $face;
+        transition: 0.3s ease-in-out;
+      }
+      .tw:hover {
+        background-color: $tw;
+        color: $s_white;
+        border: 0.5px solid $tw;
+        transition: 0.3s ease-in-out;
+      }
+      .pinte:hover {
+        background-color: $pinte;
+        color: $s_white;
+        border: 0.5px solid $pinte;
+        transition: 0.3s ease-in-out;
+      }
+      .insta:hover {
+        color: $s_white;
+        border: 0.5px solid mix(#8a3ab9, #bc2a8d, 0.5);
+        background-color: mix(#8a3ab9, #bc2a8d, 0.5);
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+}

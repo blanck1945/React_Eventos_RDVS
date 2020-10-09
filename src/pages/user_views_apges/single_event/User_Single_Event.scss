@@ -1,0 +1,27 @@
+@import "../../../scss/variables.scss";
+.user_single_dis {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  .up_box {
+    margin: auto;
+    width: 100%;
+    padding-bottom: 5px;
+    .big_header {
+      font-size: 1.6rem;
+      height: 70px;
+      background-color: $l_blue;
+    }
+  }
+  .up_nav {
+    background-color: brown;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+}
