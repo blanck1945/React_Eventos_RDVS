@@ -7,6 +7,15 @@ export const setGlobalFaqs = (payload: FAQS[]) => ({
   payload,
 });
 
+export const setSearchValue = (payload: string) => ({
+  type: globalTypes.SET_SEARCH_VALUE,
+  payload,
+});
+
+export const cleanSearchValue = () => ({
+  type: globalTypes.CLEAN_SEARCH_VALUE,
+});
+
 export const toogleFullVar = () => ({
   type: globalTypes.TOOGLE_FULL,
 });

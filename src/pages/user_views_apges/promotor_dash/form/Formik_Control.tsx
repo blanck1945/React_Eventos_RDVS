@@ -23,7 +23,7 @@ const Formik_Control = ({
 }: FormikControlProps) => {
   switch (control) {
     case "input":
-      return <Input_Comp rest={rest} tools={tools} />;
+      return <Input_Comp rest={rest} tools={tools} formik={formik} />;
     case "inputState":
       return <Input_State rest={rest} formik={formik} tools={tools} />;
     case "file":

@@ -2,6 +2,7 @@ import * as React from "react";
 import Header from "../../../../components/header/Header";
 import { AiOutlineHeart } from "react-icons/ai";
 import { AiOutlineShareAlt } from "react-icons/ai";
+import { RiAddCircleFill } from "react-icons/ri";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { adonisFetchSingleEvent } from "../../../../Redux_Store/actions/event_actions/axios";
@@ -13,13 +14,10 @@ import {
 import { localVar } from "../../../../Api/localStorage";
 import "react-toastify/dist/ReactToastify.css";
 import "./New_Show.scss";
-import Loader from "react-loader-spinner";
 import { GlobalState } from "../../../../interfaces/state";
 import { wishRoutes } from "../../../../Api/Routes";
 import { callToast } from "./func";
-import { mutate } from "swr";
 import Axios from "axios";
-import { setUserWishList } from "../../../../Redux_Store/actions/wish_actions/wish_actions";
 
 interface NewsShowsProps {
   data: AdonisEvent[];
@@ -61,9 +59,6 @@ const New_Shows = ({ data, header, overflow }: NewsShowsProps) => {
       await dispatch(
         addEventToUserList(id, localVar.id, wishRoutes.userAddWishListURL)
       );
-      /*const { data } = await mutate(wishRoutes.wishUrl + localVar.id);
-      console.log("this is another data", data);
-      dispatch(setUserWishList(data.userWishList));*/
     }
 
     return callToast(data);
@@ -99,6 +94,7 @@ const New_Shows = ({ data, header, overflow }: NewsShowsProps) => {
               </div>
               <div className="social_box">
                 <AiOutlineShareAlt className="social_icon share" />
+                <RiAddCircleFill className="social_icon cart"/>
                 <AiOutlineHeart
                   className="social_icon heart"
                   onClick={() => {

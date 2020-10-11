@@ -9,7 +9,6 @@ import Axios from "axios";
 import useSWR from "swr";
 import { wishRoutes } from "../../../../Api/Routes";
 import { setUserWishList } from "../../../../Redux_Store/actions/wish_actions/wish_actions";
-import { trackPromise } from "react-promise-tracker";
 import Loader from "react-loader-spinner";
 
 const fetchUserWishFromAdonis = async (url: string) => {

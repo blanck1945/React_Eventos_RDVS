@@ -1,49 +1,64 @@
 @import "../../../scss/variables.scss";
 .help_home_dis {
   margin: auto;
-  width: 80%;
-  min-height: 200px;
-  padding-bottom: 4px;
+  width: 50%;
+  min-height: 50px;
   margin-top: 10px;
   background-color: white;
   .fix_header {
-    width: 95%;
+    width: 100%;
     margin: auto;
-    margin-bottom: 5px;
   }
   .help_box {
     background-color: $s_white;
-    width: 95%;
-    padding: 4px 4px;
+    width: 100%;
+    padding: 0px 4px;
     cursor: pointer;
+    border-right: 1px solid $me_blue;
+    border-left: 1px solid $me_blue;
     display: flex;
     flex-direction: column;
     min-height: 50px;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: $l_blue;
+    transition: 0.3s ease-in-out;
     justify-content: space-between;
-    margin: 3px auto;
+    margin: 0 auto;
+    border-bottom: 1px solid $me_blue;
     transition: 0.2s ease-in-out;
+    .question:hover {
+      background-color: $l_blue;
+      color: white;
+      padding: 0 6px;
+    }
     .help_item {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      width: 80%;
+      width: 85%;
       min-height: 35px;
       text-align: center;
+      border-bottom: 1px solid $l_blue;
       font-size: 1rem;
       justify-content: center;
       padding: 4px 4px;
-      margin: 4px 0;
-      color: $l_blue;
-      .help_text {
-        font-size: 0.6rem;
+      margin: 8px 0;
+      text-align: center;
+      font-size: 1rem;
+      .item_title {
+        color: brown;
+        margin-bottom: 5px;
+        font-size: 1.2rem;
+      }
+
+      .item_answer {
+        font-size: 1.2rem;
+        margin: 8px 0;
       }
     }
-    .help_item:hover {
-      background-color: $l_blue;
-      color: white;
-      transition: 0.2s ease-in-out;
+    .fix_item {
+      border-bottom: none;
     }
     .optionsMenu {
       width: 100%;
@@ -67,14 +82,14 @@
       transition: 0.2s ease-in-out;
     }
   }
-}
-
-/*
-  .help_box:hover {
+  .mark_foot {
+    height: 50px;
+    width: 100%;
     background-color: $me_blue;
-    color: $s_white;
-    transition: 0.2s ease-in-out;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
   }
-  .help_box:hover > .optionsMenu {
-    color: black;
-  }*/
+}

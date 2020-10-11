@@ -10,6 +10,7 @@ import { localVar } from "../../../Api/localStorage";
 import "./Wish_List.scss";
 import { GlobalState } from "../../../interfaces/state";
 import { setUserWish } from "../../../Redux_Store/actions/user_actions/user_actions";
+import Preferences from "./wishDis/preferences/Preferences";
 
 const Wish_List = () => {
   const [userDis, setUserDis] = React.useState<string>("Lista de deseos");
@@ -41,6 +42,7 @@ const Wish_List = () => {
         {userDis === "Lista de deseos" && <WishDis />}
         {userDis === "Nombre, Email, Contraseña" && <UserInfo />}
         {userDis === "Opciones de pago" && <UserPayments />}
+        {userDis === "Preferencias de Comunicación" && <Preferences />}
       </div>
     </div>
   );

@@ -8,41 +8,37 @@ const initialState: Global = {
   errors: [],
   country: "Argentina",
   loading: false,
+  searchValue: undefined,
   faqs: undefined,
 };
 
 export default (state = initialState, action: GlobalActions) => {
   switch (action.type) {
-    case globalTypes.LOADING_ON:
+    case globalTypes.SET_SEARCH_VALUE:
       return {
         ...state,
-        loading: true,
+        searchValue: action.payload,
       };
-    case globalTypes.LOADING_OFF:
+    case globalTypes.CLEAN_SEARCH_VALUE:
       return {
         ...state,
-        loading: false,
+        searchValue: undefined,
       };
     case globalTypes.TOOGLE_FULL:
       return {
         ...state,
         full: !state.full,
       };
-    case globalTypes.TOOGLE_DISPLAY:
-      return {
-        ...state,
-        display: action.payload,
-      };
     case globalTypes.TOOGLE_COUNTRY:
       return {
         ...state,
         country: action.payload,
       };
-      case globalTypes.SET_GLOBAL_FAQS:
-        return {
-          ...state,
-          faqs: action.payload
-        }
+    case globalTypes.SET_GLOBAL_FAQS:
+      return {
+        ...state,
+        faqs: action.payload,
+      };
     case globalTypes.SET_ERRORS:
       return {
         ...state,

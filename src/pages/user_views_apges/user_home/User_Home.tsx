@@ -19,17 +19,24 @@ import { navItems, categoryItems, typeItems } from "./utils/NavItems";
 import { localVar } from "../../../Api/localStorage";
 import Loader from "react-loader-spinner";
 import { toast, ToastContainer } from "react-toastify";
-import useSWR from "swr";
-import { userRoutes } from "../../../Api/Routes";
 import Axios from "axios";
+import { eventRoutes } from "../../../Api/Routes";
 
 import "./User_Home.scss";
+import useSWR from "swr";
+import { setEventData } from "../../../Redux_Store/actions/event_actions/actions";
 
 interface UserHomeProps {
   activeEvents: AdonisEvent[];
 }
 
 toast.configure();
+
+const AxiosFetchAllEvents = async (url: string) => {
+  const { data } = await Axios.get(url);
+  console.log(data);
+  return data;
+};
 
 const User_Home = ({ activeEvents }: UserHomeProps) => {
   const eventState = useSelector((state: GlobalState) => state.events);
@@ -38,6 +45,8 @@ const User_Home = ({ activeEvents }: UserHomeProps) => {
   const [homeType, setHomeType] = React.useState<string>("Obra");
   const [homeCategory, setHomeCategory] = React.useState<string>("Conferencia");
   const [openHeader, setOpenHeader] = React.useState<boolean>(false);
+  const [counter, setCounter] = React.useState<number>(0);
+  const [random, setRandom] = React.useState<AdonisEvent[]>(undefined);
   const dispatch = useDispatch();
 
   React.useEffect(() => {
@@ -49,14 +58,18 @@ const User_Home = ({ activeEvents }: UserHomeProps) => {
       checkLogUser();
     }
   }, []);
+
   React.useEffect(() => {
-    const callAxios = async () => {
-      await dispatch(FetchAllEvents());
-    };
-    if (eventState.active_events.length === 0) {
-      callAxios();
+    if (counter === 0) {
+      setCounter(1);
     }
-  }, []);
+  }, [counter]);
+
+  const { data: events } = useSWR(eventRoutes.FetchURL, AxiosFetchAllEvents, {
+    onSuccess: (data) => {
+      dispatch(setEventData(data));
+    },
+  });
 
   const openState = {
     openHeader,
@@ -80,16 +93,16 @@ const User_Home = ({ activeEvents }: UserHomeProps) => {
           setFilter={setHomeDis}
         />
         <div className="show_carro">
-          {eventState.active_events.length !== 0 ? (
+          {events !== undefined ? (
             <>
               {
                 <New_Shows
                   data={
                     homeDis === "Todos"
-                      ? getRandom3(eventState.active_events)
+                      ? events
                       : homeDis === "Gratuitos"
-                      ? filterByFree(eventState.active_events, true)
-                      : filterByFree(eventState.active_events, false)
+                      ? filterByFree(events, true)
+                      : filterByFree(events, false)
                   }
                   header={homeDis}
                 />
@@ -102,7 +115,7 @@ const User_Home = ({ activeEvents }: UserHomeProps) => {
               />
               {
                 <New_Shows
-                  data={filterByCategory(eventState.active_events, homeType)}
+                  data={filterByCategory(events, homeType)}
                   header={homeType}
                 />
               }
@@ -114,39 +127,30 @@ const User_Home = ({ activeEvents }: UserHomeProps) => {
               />
               {
                 <New_Shows
-                  data={filterByType(eventState.active_events, homeCategory)}
+                  data={filterByType(events, homeCategory)}
                   header={homeCategory}
                 />
               }
               {
                 <New_Shows
-                  data={filterByFree(eventState.active_events, true)}
+                  data={filterByFree(events, true)}
                   header="Gratuitos"
                 />
               }
-              <New_Shows
-                data={getRandom3(eventState.active_events)}
-                header="Todos"
-              />
+
               <New_Shows
                 data={filterByCategory(eventState.active_events, "Conferencia")}
                 header="Conferencia"
               />
               {homeDis === "Pagos" && (
-                <New_Shows
-                  data={filterByFree(eventState.active_events, false)}
-                  header="Pagos"
-                />
+                <New_Shows data={filterByFree(events, false)} header="Pagos" />
               )}
               <New_Shows
-                data={filterByCategory(
-                  eventState.active_events,
-                  "Expresión Artistica"
-                )}
+                data={filterByCategory(events, "Expresión Artistica")}
                 header="Expresión Artistica"
               />
               <New_Shows
-                data={filterByCategory(eventState.active_events, "Stream")}
+                data={filterByCategory(events, "Stream")}
                 header="Stream"
               />
             </>

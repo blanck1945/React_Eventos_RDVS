@@ -31,3 +31,8 @@ export const postEventData = (payload: FireEvent) => ({
 export const clearSingleData = () => ({
   type: eventTypes.CLEAR_SINGLE_EVENT,
 });
+
+export const setSearchEvents = (payload: AdonisEvent[]) => ({
+  type: eventTypes.SET_SEARCH_EVENT,
+  payload,
+});

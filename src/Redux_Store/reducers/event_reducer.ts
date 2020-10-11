@@ -4,6 +4,7 @@ import { EventReducer } from "../../interfaces/Reducers/EventReducer";
 
 const initialState: EventReducer = {
   active_events: [],
+  search_events: undefined,
   single_event: undefined,
   pass_events: [],
   user_active_events: [],
@@ -21,6 +22,11 @@ export default (state = initialState, action: EventActions) => {
       return {
         ...state,
         user_single_event: action.payload,
+      };
+    case eventTypes.SET_SEARCH_EVENT:
+      return {
+        ...state,
+        search_events: action.payload,
       };
     case eventTypes.POST_EVENT:
       return {

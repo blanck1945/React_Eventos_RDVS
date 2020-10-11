@@ -13,7 +13,12 @@ interface USER_SET_SINGLE_ACTION {
   payload: NewImg;
 }
 
-interface SetEvents {
+interface SET_SEARCH_VALUE_ACTION_TYPE {
+  type: typeof eventTypes.SET_SEARCH_EVENT;
+  payload: AdonisEvent[];
+}
+
+interface SET_EVENTS_ACTION_TYPE {
   type: typeof eventTypes.SET_EVENTS;
   payload: AdonisEvent[];
 }
@@ -23,19 +28,20 @@ interface SET_SINGLE_EVENT_ACTION {
   payload: AdonisEvent;
 }
 
-interface ClearSingleEvent {
+interface CLEAR_SINGLE_EVENT_ACTION_TYPE {
   type: typeof eventTypes.CLEAR_SINGLE_EVENT;
 }
 
-interface PostEvent {
+interface POST_EVENT_ACTION_TYPE {
   type: typeof eventTypes.POST_EVENT;
   payload: FireEvent;
 }
 
 export type EventActions =
-  | SetEvents
-  | PostEvent
+  | SET_EVENTS_ACTION_TYPE
+  | POST_EVENT_ACTION_TYPE
   | SET_SINGLE_EVENT_ACTION
-  | ClearSingleEvent
+  | CLEAR_SINGLE_EVENT_ACTION_TYPE
   | USER_SET_EVENTS_ACTION
-  | USER_SET_SINGLE_ACTION;
+  | USER_SET_SINGLE_ACTION
+  | SET_SEARCH_VALUE_ACTION_TYPE;

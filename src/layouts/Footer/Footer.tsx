@@ -9,14 +9,10 @@ const Footer: React.FunctionComponent = () => {
   const globalState = useSelector((state: GlobalState) => state.global);
 
   return (
-    <>
-      {globalState.full ? (
-        <div className="footer">
-          <Up_Footer />
-          <Down_Footer />
-        </div>
-      ) : null}
-    </>
+    <div className="footer">
+      <Up_Footer />
+      <Down_Footer />
+    </div>
   );
 };
 

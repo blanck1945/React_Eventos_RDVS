@@ -6,9 +6,15 @@ import { RestOptions, Tools } from "../inputProps";
 interface InputCompProps {
   rest: RestOptions;
   tools?: Tools;
+  formik?: any;
 }
 
-const Input_Comp = ({ rest, tools }: InputCompProps) => {
+const Input_Comp = ({ rest, tools, formik }: InputCompProps) => {
+  const handlerInput = (e: any) => {
+    console.log(e.target.input);
+    formik.setFieldValue(rest.name, e.target.value);
+  };
+
   return (
     <>
       {rest.useTools ? (
@@ -38,12 +44,23 @@ const Input_Comp = ({ rest, tools }: InputCompProps) => {
           <label htmlFor={rest.name} className={rest.label_class}>
             {rest.label}
           </label>
-          <Field
-            id={rest.name}
-            name={rest.name}
-            className={rest.input_class}
-            type={rest.type ? rest.type : "text"}
-          />
+          {rest.value ? (
+            <Field
+              id={rest.name}
+              name={rest.name}
+              className={rest.input_class}
+              defaultValue={rest.value}
+              onChange={(e: any) => handlerInput(e)}
+              type={rest.type ? rest.type : "text"}
+            />
+          ) : (
+            <Field
+              id={rest.name}
+              name={rest.name}
+              className={rest.input_class}
+              type={rest.type ? rest.type : "text"}
+            />
+          )}
           {rest.aclaration ? (
             <h4 className={rest.aclaration_class}>{rest.aclaration}</h4>
           ) : null}

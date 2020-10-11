@@ -11,7 +11,7 @@ export const callToast = (value: ToastResponse) => {
     case "noUser":
       return toast.error(value.msg, {
         position: "bottom-left",
-        autoClose: 2500,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         progress: undefined,
@@ -19,7 +19,7 @@ export const callToast = (value: ToastResponse) => {
     case "noAdd":
       return toast.info(value.msg, {
         position: "bottom-left",
-        autoClose: 2500,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         progress: undefined,
@@ -27,7 +27,7 @@ export const callToast = (value: ToastResponse) => {
     case "add":
       return toast.success(value.msg, {
         position: "bottom-left",
-        autoClose: 2500,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         progress: undefined,
@@ -35,7 +35,7 @@ export const callToast = (value: ToastResponse) => {
     case "delete":
       return toast.error(value.msg, {
         position: "bottom-left",
-        autoClose: 2500,
+        autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         progress: undefined,

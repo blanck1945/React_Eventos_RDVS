@@ -1,0 +1,29 @@
+@import "../../../../../scss/variables.scss";
+.prefer_box {
+  width: 70%;
+  height: 240px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: $s_shadow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .header_fix {
+    margin: 0;
+    margin-bottom: 2px;
+    width: 100%;
+    background-color: $l_blue;
+  }
+  .prefer_check_div {
+    margin: 12px 0;
+    .chack_label {
+      margin-left: 5px;
+      color: $l_blue;
+    }
+  }
+  .btn_fix {
+    width: 100%;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+}

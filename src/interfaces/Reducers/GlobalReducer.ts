@@ -4,6 +4,7 @@ export interface Global {
   errors: Errors[];
   country: string;
   loading: boolean;
+  searchValue: string;
   faqs: FAQS[];
 }
 

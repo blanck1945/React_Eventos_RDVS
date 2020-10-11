@@ -65,33 +65,39 @@ const Global_Help = () => {
         <Header header="Ayuda" header_class="fix_header" />
         {faqArr !== undefined ? (
           faqArr.map((el: FAQS) => (
-            <div
-              key={el.id}
-              className="help_box"
-              onClick={() => {
-                openFAQ(el.id);
-              }}
-            >
-              <h3>{el.question}</h3>
-              {el.headers.map((res: any, index: number) =>
-                el.openFaq && numHeader === el.id ? (
-                  <div
-                    className="help_item"
-                    key={index}
-                    onClick={() => {
-                      setOpenOptions(!openOptions);
-                      setOptionNum(index);
-                    }}
-                  >
-                    <h3 key={res}>{res}</h3>
-                    {openOptions && optionNum === index
-                      ? el.anwsers.map((option: string, optionInd: number) => (
-                          <h3 key={optionInd}>{option}</h3>
-                        ))
-                      : null}
-                  </div>
-                ) : null
-              )}
+            <div key={el.id} className="help_box">
+              <h3
+                onClick={() => {
+                  openFAQ(el.id);
+                }}
+                className="question"
+              >
+                {el.question}
+              </h3>
+              {numHeader === el.id && el.openFaq
+                ? el.headers.map((res: any, index: number) => (
+                    <div
+                      className={
+                        index === el.headers.length - 1
+                          ? "help_item fix_item"
+                          : "help_item"
+                      }
+                      key={index}
+                    >
+                      {console.log(el.headers.length)}
+                      <h3 className="item_title" key={res}>
+                        {res}
+                      </h3>
+                      {el.anwsers.map(
+                        (answer: string, answer_index: number) => (
+                          <h4 className="item_answer" key={answer_index}>
+                            {answer}
+                          </h4>
+                        )
+                      )}
+                    </div>
+                  ))
+                : null}
             </div>
           ))
         ) : (
@@ -104,6 +110,7 @@ const Global_Help = () => {
             />
           </div>
         )}
+        <div className="mark_foot">RDVS Eventos</div>
       </div>
     </div>
   );

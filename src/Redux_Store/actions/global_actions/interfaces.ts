@@ -7,6 +7,15 @@ export interface SET_GLOBAL_FAQS_ACTION_TYPE {
   payload: FAQS[];
 }
 
+export interface SET_SEARCH_VALUE {
+  type: typeof globalTypes.SET_SEARCH_VALUE;
+  payload: string;
+}
+
+export interface CLEAN_SEARCH_VALLUE_ACTION_TYPE {
+  type: typeof globalTypes.CLEAN_SEARCH_VALUE;
+}
+
 export interface ToogleFull {
   type: typeof globalTypes.TOOGLE_FULL;
   payload: boolean;
@@ -17,7 +26,7 @@ export interface ToogleDisplay {
   payload: string;
 }
 
-export interface SetErrorsAction {
+export interface SET_ERROR_ACTION_TYPE {
   type: typeof globalTypes.SET_ERRORS;
   payload: any;
 }
@@ -38,8 +47,10 @@ export interface TOOGLE_LOADING_OFF {
 export type GlobalActions =
   | ToogleFull
   | ToogleDisplay
-  | SetErrorsAction
+  | SET_ERROR_ACTION_TYPE
   | ToogleCountry
   | TOOGLE_LOADING_ON
   | TOOGLE_LOADING_OFF
-  | SET_GLOBAL_FAQS_ACTION_TYPE;
+  | SET_GLOBAL_FAQS_ACTION_TYPE
+  | SET_SEARCH_VALUE
+  | CLEAN_SEARCH_VALLUE_ACTION_TYPE;

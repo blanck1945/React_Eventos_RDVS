@@ -1,12 +1,12 @@
 import * as React from "react";
 import * as reactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Navbar from "./layouts/Navbar/navbar";
+import Navbar from "./layouts/Navbar/Navbar";
 import Footer from "./layouts/Footer/Footer";
 import HomeNavbar from "./components/home_navbar/HomeNavbar";
 import Login from "./pages/login/Login";
 import { Home_Page } from "./pages/home/Home_Page";
-import { Provider, useSelector, useDispatch } from "react-redux";
+import { Provider, useDispatch } from "react-redux";
 import { store as Redux_Store } from "./Redux_Store/store";
 import About from "./pages/about/About";
 import Single_Event from "./pages/single_event/Single_Event";
@@ -17,12 +17,10 @@ import User_Single_Event from "./pages/user_views_apges/single_event/User_Single
 
 import "./main.scss";
 import "./scss/variables.scss";
-import { FetchAllEvents } from "./Redux_Store/actions/event_actions/axios";
-import { GlobalState } from "./interfaces/state";
-import Register from "./pages/login/register/Register";
 import Promotor_Dash from "./pages/user_views_apges/promotor_dash/Promotor_Dash";
 import { setLogUser } from "./Redux_Store/actions/user_actions/user_actions";
 import Protected_Route from "./components/protected_route/Protected_Route";
+import Search_Page from "./pages/user_views_apges/search_page/Search_Page";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -48,8 +46,13 @@ const App = () => {
         <Route path="/dash" component={Home_Page} />
         <Route path="/help" component={Global_Help} />
         <Route path="/user_single" component={User_Single_Event} />
-        <Protected_Route path={"/promotor_dash"} component={Promotor_Dash} exact={true}/>
-        <Protected_Route path={"/wish"} component={Wish_List} exact={true}/>
+        <Route path="/search_page" component={Search_Page} />
+        <Protected_Route
+          path={"/promotor_dash"}
+          component={Promotor_Dash}
+          exact={true}
+        />
+        <Protected_Route path={"/wish"} component={Wish_List} exact={true} />
       </Switch>
       <Footer />
     </>

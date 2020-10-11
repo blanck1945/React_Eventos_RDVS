@@ -1,0 +1,53 @@
+@import "../../../scss/variables.scss";
+.search_home {
+  width: 80%;
+  margin: auto;
+  margin-top: 5px;
+  display: flex;
+  box-shadow: $s_shadow;
+  .search_side {
+    width: 25%;
+    display: flex;
+    min-height: 400px;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid $me_blue;
+    .header_side {
+      margin: 0;
+      width: 100%;
+    }
+    .side_box {
+      display: flex;
+      margin: 8px 0;
+      align-items: center;
+      flex-direction: column;
+      .side_result {
+        color: $me_blue;
+        font-size: 1.4rem;
+      }
+      .side_input {
+        width: 90%;
+        height: 30px;
+      }
+      .side_label {
+        margin-bottom: 3px;
+        color: $l_blue;
+        font-size: 1rem;
+      }
+    }
+    .btn_fix_search {
+      color: white;
+      width: 90%;
+      height: 35px;
+      margin: auto;
+      margin-top: 10px;
+      margin-left: 8px;
+    }
+  }
+  .search_result {
+    width: 75%;
+    min-height: 400px;
+    background-color: white;
+  }
+}

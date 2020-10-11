@@ -16,6 +16,7 @@ export interface RestOptions {
   name?: string;
   label?: string;
   type?: string;
+  value?: string;
   div_class?: string;
   label_class?: string;
   input_class?: string;

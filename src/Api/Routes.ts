@@ -15,6 +15,7 @@ export const eventRoutes = {
   //FetchURL: "https://adonis-api-server.herokuapp.com/api/eventos",
   FetchURL: prefix + "api/eventos/",
   creatEventURL: prefix + "api/eventos/create",
+  searchByName: prefix + "api/eventos/search_by_name",
 };
 
 export const wishRoutes = {
