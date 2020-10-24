@@ -14,16 +14,8 @@ const Select = ({ setRegisterValue }: SelectProps) => {
         Por favor, indique que tipo de registro quiere
       </h3>
       <div className="select_div">
-        <Btn_Div
-          role="Usuario"
-          desc="Asisitir a eventos"
-          func={setRegisterValue}
-        />
-        <Btn_Div
-          role="Promotor"
-          desc="Ofrecer eventos"
-          func={setRegisterValue}
-        />
+        <Btn_Div role="Usuario" func={setRegisterValue} />
+        <Btn_Div role="Promotor" func={setRegisterValue} />
       </div>
       <div className="select_foot">
         <h4 className="select_title">Muchas Gracias por elegirnos</h4>

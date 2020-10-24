@@ -4,10 +4,9 @@ import Register from "./register/Register";
 import LoginForm from "./register/LoginForm";
 import Congratz from "./register/formComp/Congratz";
 import Flag from "./register/formComp/Flag";
-
-import "./Login.scss";
 import Select from "./register/Select";
 import RegisterPromotor from "./register/RegisterPromotor";
+import "./Login.scss";
 
 const Login = () => {
   const [registerValue, setRegisterValue] = React.useState<string>(
@@ -15,7 +14,6 @@ const Login = () => {
   );
   const [flag, setFlag] = React.useState<boolean>(false);
   const [congratz, setCongratz] = React.useState<boolean>(false);
-
   return (
     <div className="user_home">
       <div className="home_dis_login">

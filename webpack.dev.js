@@ -10,5 +10,8 @@ module.exports = merge(common, {
         filename: "[name].bundle.js"
     },
     devtool: "cheap-module-eval-source-map",
-
+    devServer: {
+        historyApiFallback: true,
+        hot: true
+    },
 });

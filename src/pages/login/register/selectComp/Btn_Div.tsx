@@ -4,17 +4,15 @@ import "./Btn_Div.scss";
 
 interface BtnDivProps {
   role: string;
-  desc: string;
   func: React.Dispatch<React.SetStateAction<string>>;
 }
 
-const Btn_Div = ({ role, desc, func }: BtnDivProps) => {
+const Btn_Div = ({ role, func }: BtnDivProps) => {
   return (
     <div className="select_box">
       <button className="general_btn fix" onClick={() => func(role)}>
         {role}
       </button>
-      <p className="select_p">{desc}</p>
     </div>
   );
 };
