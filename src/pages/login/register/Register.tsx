@@ -35,6 +35,7 @@ const Register = ({ setCongratz, setFlag }: RegisterProps) => {
   const { promiseInProgress } = usePromiseTracker();
 
   const checkRes = (res: any) => {
+    console.log(res.action);
     if (!res.action) {
       setFlag(true);
     } else {
@@ -46,6 +47,7 @@ const Register = ({ setCongratz, setFlag }: RegisterProps) => {
   const handlerRegister = async (values: Visitor) => {
     const newUser = checkPassword(values, "usuario");
     const { check, user } = newUser;
+    console.log(check);
     if (!check) {
       return setFlag(true);
     }
